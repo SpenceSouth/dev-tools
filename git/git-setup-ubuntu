@@ -4,6 +4,7 @@ read -p "Please enter in your email address registered with github: " email
 echo ${email}
 git config --global user.name "${name}"
 git config --global user.email "${email}"
+sudo apt-get install xclip -y
 echo "After the prompt just press enter"
 ssh-keygen -t rsa -b 4096 -C "${email}"
 eval "$(ssh-agent -s)"
